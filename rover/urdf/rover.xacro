@@ -1,11 +1,11 @@
 <?xml version='1.0'?>
 
-<robot name="atom" xmlns:xacro="http://www.ros.org/wiki/xacro">
-<xacro:include filename="$(find atom)/urdf/imu.xacro" />
-<xacro:include filename="$(find atom)/urdf/gps.xacro" />
-<xacro:include filename="$(find atom)/urdf/zed2.xacro" />
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find rover)/urdf/imu.xacro" />
+<xacro:include filename="$(find rover)/urdf/gps.xacro" />
+<xacro:include filename="$(find rover)/urdf/zed2.xacro" />
 
-	<xacro:property name="robot_name" value="atom" />
+	<xacro:property name="robot_name" value="rover" />
 	<xacro:property name="robot_chassis_mass" value="15"/>
 	<xacro:property name="robot_chassis_length" value="0.2"/>
 	<xacro:property name="robot_chassis_radius" value="0.25"/>
@@ -209,7 +209,7 @@
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://atom/meshes/hokuyo.dae"/>
+				<mesh filename="package://rover/meshes/hokuyo.dae"/>
 			</geometry>
 		</visual>
 
@@ -341,6 +341,6 @@
 	</gazebo>
 
 	<!-- Motor, Camera and Lidar Simulation -->
-	<xacro:include filename="$(find atom)/urdf/atom.gazebo" />
+	<xacro:include filename="$(find rover)/urdf/rover.gazebo" />
 
 </robot>

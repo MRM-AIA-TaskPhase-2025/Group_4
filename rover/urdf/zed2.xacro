@@ -27,7 +27,7 @@
 </link>
 
 <joint name="zed2_joint" type="fixed">
-    <origin xyz="0.26 0 0.05" rpy="0.0 1.57 1.57"/>
+    <origin xyz="0.26 0 0.05" rpy="0.0 0 0"/>
     <parent link="chassis"/>
     <child link="zed2_link"/>
     <axis xyz="0.0 1.0 0.0"/>
@@ -37,13 +37,13 @@
 <link name="zed2_optical_frame"/>
 
 <joint name="zed2_optical_joint" type="fixed">
-  <origin xyz="0.0 0.0 0.0" rpy="1.57 -1.57 0.0"/>
+  <origin xyz="0.26 0 0.05" rpy="0 0 0.0"/>
   <parent link="zed2_link"/>
   <child link="zed2_optical_frame"/>
 </joint>
 
     <gazebo reference="zed2_optical_frame">
-    <material>Gazebo/Pink</material>
+    <material>Gazebo/Orange</material>
   <sensor name="zed2_optical_frame" type="depth">
     <update_rate>20</update_rate>
     <camera>

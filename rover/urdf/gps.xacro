@@ -18,7 +18,7 @@
     </visual>
 </link>
 <gazebo reference="gps_link">
-<material>Gazebo/Pink</material>
+<material>Gazebo/White</material>
 </gazebo>
 <joint name="gps_joint" type="fixed">
     <origin xyz="0.1 0.0 0.2" rpy="0.0 0.0 0.0"/>
